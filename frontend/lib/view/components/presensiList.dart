@@ -94,6 +94,11 @@ class _PresensiListState extends State<PresensiList> {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontFamily: 'Poppins', fontSize: 12),
                 ),
+                Text(
+                  "Alfa",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontFamily: 'Poppins', fontSize: 12),
+                ),
               ],
               mainAxisAlignment: MainAxisAlignment.end,
               spacing: 24,
@@ -156,11 +161,15 @@ class _PresensiListState extends State<PresensiList> {
                         return Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              santri.nama,
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
+                            Expanded(
+                              child: Text(
+                                santri.nama,
+                                softWrap: true,
+                                overflow: TextOverflow.visible,
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 15,
+                                ),
                               ),
                             ),
                             Row(
@@ -205,6 +214,22 @@ class _PresensiListState extends State<PresensiList> {
                                   builder: (context, status, child) {
                                     return Radio<String>(
                                       value: 'sakit',
+                                      groupValue: status,
+                                      activeColor: Colors.green.shade700,
+                                      onChanged: (String? value) {
+                                        statusNotifier.value = value!;
+                                        print(
+                                          "Presensi Statuses: ${presensiStatuses}",
+                                        );
+                                      },
+                                    );
+                                  },
+                                ),
+                                ValueListenableBuilder<String>(
+                                  valueListenable: statusNotifier,
+                                  builder: (context, status, child) {
+                                    return Radio<String>(
+                                      value: 'alfa',
                                       groupValue: status,
                                       activeColor: Colors.green.shade700,
                                       onChanged: (String? value) {

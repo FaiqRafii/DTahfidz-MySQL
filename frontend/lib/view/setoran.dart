@@ -240,12 +240,24 @@ class _SetoranState extends State<Setoran> with SingleTickerProviderStateMixin {
                                         color: Colors.green.shade700,
                                         size: 25,
                                       ),
-                                      Text(
-                                        selectedSantri['nama'] ??
-                                            (santriList.isNotEmpty
-                                                ? santriList.first.nama
-                                                : 'Memuat...'),
-                                        style: TextStyle(fontFamily: 'Poppins'),
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 5,
+                                          ),
+                                          child: Text(
+                                            selectedSantri['nama'] ??
+                                                (santriList.isNotEmpty
+                                                    ? santriList.first.nama
+                                                    : 'Memuat...'),
+                                            softWrap: true,
+                                            overflow: TextOverflow.visible,
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontFamily: 'Poppins',
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                       Icon(
                                         Icons.arrow_drop_down_rounded,
