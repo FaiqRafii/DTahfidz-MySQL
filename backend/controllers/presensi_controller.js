@@ -91,7 +91,7 @@ const addPresensiMusyrif = async (req, res) => {
   const [hari, bulan, tahun] = tanggal.split("-");
   const formattedDate = `${tahun}-${bulan}-${hari}`;
 
-  db.query('INSERT INTO presensi_musyrif(id_user,tanggal,jam) VALUES(?,?,?)',[id_user,formattedDate,jam],(err,result)=>{
+  db.query('INSERT INTO presensi_musyrif(id_user,tanggal,jam,status) VALUES(?,?,?,"hadir")',[id_user,formattedDate,jam],(err,result)=>{
     if(err){
       return res.status(500).json({message:`Error menambah presensi musyrif id ${id_user}: ${err}`})
     }

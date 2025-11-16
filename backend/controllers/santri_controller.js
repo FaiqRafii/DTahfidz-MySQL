@@ -13,7 +13,7 @@ const getSantriByHalaqoh = (req, res) => {
   //   res.status(500).send(`Error retrieving santri from database ${e}`);
   // }
 
-  db.query("select id_santri,id_halaqoh,nama,kelas from santri where id_halaqoh=?",[id_halaqoh],(err,result)=>{
+  db.query("select id_santri,id_halaqoh,nama,kelas,jns_kel from santri where id_halaqoh=?",[id_halaqoh],(err,result)=>{
       if(err){
           res.status(500).send("Error retrieving santri from database " + err);
       }
@@ -36,7 +36,7 @@ const insertSantri = async (req, res) => {
   //   res.status(500).send(`Error inserting halaqoh data into database: ${err}`);
   // }
 
-  db.query('INSERT INTO santri(id_halaqoh,nama,kelas) VALUES(?,?,?)',[id_halaqoh,nama,kelas],(err,result)=>{
+  db.query('INSERT INTO santri(id_halaqoh,nama,kelas,jns_kel) VALUES(?,?,?,?)',[id_halaqoh,nama,kelas],(err,result)=>{
     if(err){
       res.status(500).json({message:`Error memasukkan santri: ${e}`})
     }else{
