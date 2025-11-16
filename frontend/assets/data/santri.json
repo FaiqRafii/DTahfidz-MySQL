@@ -1,0 +1,33 @@
+[
+    {
+        "id_santri":"1",
+        "id_halaqoh":"1",
+        "nama":"Raihan Rasyid",
+        "kelas":"X"
+    },
+    {
+        "id_santri":"2",
+        "id_halaqoh":"1",
+        "nama":"Arham Mumtaz",
+        "kelas":"X"
+    },
+    {
+        "id_santri":"3",
+        "id_halaqoh":"1",
+        "nama":"Adam Fatin",
+        "kelas":"X"
+    },
+    {
+        "id_santri":"4",
+        "id_halaqoh":"1",
+        "nama":"Adam Nugraha",
+        "kelas":"X"
+    },
+    {
+        "id_santri":"5",
+        "id_halaqoh":"2",
+        "nama":"Fahri Fatin",
+        "kelas":"X"
+    }
+    
+]

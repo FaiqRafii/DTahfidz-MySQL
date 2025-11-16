@@ -1,0 +1,119 @@
+### Login
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "email":"faiq@gmail.com",
+    "password":"password"
+}
+
+### 
+
+### Register
+POST http://localhost:4000/register
+Content-Type: application/json
+
+{
+    "email":"rafii@gmail.com",
+    "password":"password",
+    "nama":"Rafii Wahyudi",
+    "level":"musyrif"
+}
+
+### Load Halaqoh By Id User
+GET http://localhost:4000/halaqoh?id_user=1
+
+### Load Presensi Santri
+GET http://localhost:4000/presensi/santri?id_halaqoh=1&tanggal=04-11-2025&jam=subuh
+
+### Load Presensi Musyrif
+GET http://localhost:4000/presensi/musyrif?id_user=1&tanggal=16-11-2025
+
+### Load Santri By Id Halaqoh
+GET http://localhost:4000/santri?id_halaqoh=1
+
+### Load Setoran Santri By Id Santri
+GET http://localhost:4000/setoran?id_santri=2
+
+### Update Setoran Santri By Id Setoran
+PUT http://localhost:4000/setoran
+Content-Type: application/json
+
+{
+    "id_setoran":"690e48acbb5eed3ac4da0122",
+    "tanggal":"13-11-2025",
+    "jam":"malam",
+    "id_surah_mulai": "2",
+    "ayat_mulai": "22",
+    "id_surah_akhir": "3",
+    "ayat_akhir": "33"
+}
+
+### Delete Setoran By Id Setoran
+DELETE http://localhost:4000/setoran?id_setoran=690e48acbb5eed3ac4da0122
+
+### Add Presensi Santri
+POST http://localhost:4000/presensi/santri
+Content-Type: application/json
+
+{
+    "id_santri":"690c0d146b6baf501890883d",
+    "tanggal":"05-11-2025",
+    "jam":"subuh",
+    "status":"hadir"
+}
+
+### Add Presensi Musyrif
+POST http://localhost:4000/presensi/musyrif
+Content-Type: application/json
+
+{
+    "id_user":"1",
+    "tanggal":"16-11-2025",
+    "jam":"malam"
+}
+
+### Add Setoran Santri
+POST http://localhost:4000/setoran
+Content-Type: application/json
+
+{
+    "id_santri":"690c0d146b6baf501890883d",
+    "tanggal":"05-11-2025",
+    "jam":"subuh",
+    "id_surah_mulai":"1",
+    "ayat_mulai":"1",
+    "id_surah_akhir":"2",
+    "ayat_akhir":"2"
+}
+
+### Add Santri
+POST http://localhost:4000/santri
+Content-Type: application/json
+
+  {
+    "nama":"Raihan Rasyid",
+    "kelas":"xi",
+    "id_halaqoh":"690beea31693580d231dbf25"
+}
+
+### Add Halaqoh
+POST http://localhost:4000/halaqoh
+Content-Type: application/json
+
+  {
+    "halaqoh":"Takhosus B",
+    "jumlah_santri":25,
+    "lokasi_halaqoh":"Masjid Lama",
+    "id_user":"690beca5c12752acd4805618"
+}
+
+### Change Password
+POST http://localhost:4000/users/change-password
+Content-Type: application/json
+
+{
+    "id_user":"1",
+    "newPassword":"password"
+}
+ 

@@ -1,0 +1,37 @@
+[
+    {
+        "id_presensi":"1",
+        "id_santri":"1",
+        "tanggal":"21-10-2025",
+        "jam":"subuh",
+        "status":"izin"
+    },
+    {
+        "id_presensi":"2",
+        "id_santri":"2",
+        "tanggal":"21-10-2025",
+        "jam":"subuh",
+        "status":"hadir"
+    },
+    {
+        "id_presensi":"3",
+        "id_santri":"3",
+        "tanggal":"21-10-2025",
+        "jam":"malam",
+        "status":"izin"
+    },
+    {
+        "id_presensi":"4",
+        "id_santri":"4",
+        "tanggal":"21-10-2025",
+        "jam":"subuh",
+        "status":"sakit"
+    },
+    {
+        "id_presensi":"5",
+        "id_santri":"5",
+        "tanggal":"21-10-2025",
+        "jam":"malam",
+        "status":"izin"
+    }
+]
